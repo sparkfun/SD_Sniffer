@@ -2170,6 +2170,46 @@ We've spent an enormous amount of time creating and checking these footprints an
 <rectangle x1="22.606" y1="-0.254" x2="23.114" y2="0.254" layer="51"/>
 <rectangle x1="25.146" y1="-0.254" x2="25.654" y2="0.254" layer="51"/>
 </package>
+<package name="SD_1:1">
+<smd name="1" x="-1" y="6.77" dx="1.8" dy="0.9" layer="1"/>
+<smd name="2" x="-1" y="4.27" dx="1.8" dy="0.9" layer="1"/>
+<smd name="3" x="-1" y="2.52" dx="1.8" dy="0.9" layer="1"/>
+<smd name="CD" x="-1" y="1.02" dx="1.8" dy="0.9" layer="1"/>
+<smd name="4" x="-1" y="-0.73" dx="1.8" dy="0.9" layer="1"/>
+<smd name="5" x="-1" y="-3.23" dx="1.8" dy="0.9" layer="1"/>
+<smd name="6" x="-1" y="-5.73" dx="1.8" dy="0.9" layer="1"/>
+<smd name="7" x="-1" y="-8.15" dx="1.8" dy="0.9" layer="1"/>
+<smd name="8" x="-1" y="-9.85" dx="1.8" dy="0.9" layer="1"/>
+<smd name="SH@1" x="20" y="14.496" dx="2" dy="1.4" layer="1"/>
+<smd name="SH@2" x="21.15" y="-13.589" dx="2" dy="1.527" layer="1"/>
+<smd name="WP" x="-1" y="-13" dx="1.8" dy="1.1" layer="1"/>
+<smd name="9" x="-1" y="9.27" dx="1.8" dy="0.9" layer="1"/>
+<wire x1="0" y1="14.25" x2="28.8" y2="14.25" width="0.127" layer="51"/>
+<wire x1="28.8" y1="14.25" x2="28.8" y2="10" width="0.127" layer="51"/>
+<wire x1="28.8" y1="10" x2="28.8" y2="-10.5" width="0.127" layer="51"/>
+<wire x1="28.8" y1="-10.5" x2="28.8" y2="-14.25" width="0.127" layer="51"/>
+<wire x1="28.8" y1="-14.25" x2="0" y2="-14.25" width="0.127" layer="51"/>
+<wire x1="0" y1="-14.25" x2="0" y2="14.25" width="0.127" layer="51"/>
+<hole x="23.3" y="11.94" drill="1.55"/>
+<hole x="23.3" y="-12.32" drill="1.55"/>
+<text x="0.54" y="12.94" size="0.4064" layer="25">&gt;NAME</text>
+<text x="0.54" y="11.67" size="0.4064" layer="27">&gt;VALUE</text>
+<wire x1="-0.095" y1="10.019" x2="-0.095" y2="14.418" width="0.254" layer="21"/>
+<wire x1="-0.095" y1="14.418" x2="5.239" y2="14.418" width="0.254" layer="21"/>
+<wire x1="21.849" y1="14.318" x2="28.888" y2="14.318" width="0.254" layer="21"/>
+<wire x1="28.888" y1="14.318" x2="28.9" y2="12.9" width="0.254" layer="21"/>
+<wire x1="23.011" y1="-14.327" x2="28.888" y2="-14.327" width="0.254" layer="21"/>
+<wire x1="28.888" y1="-14.327" x2="28.888" y2="-13.349" width="0.254" layer="21"/>
+<wire x1="-0.095" y1="-14.238" x2="-0.095" y2="-14.327" width="0.254" layer="21"/>
+<wire x1="-0.095" y1="-14.327" x2="5.239" y2="-14.327" width="0.254" layer="21"/>
+<wire x1="35.6" y1="12" x2="35.6" y2="-13" width="0.127" layer="51"/>
+<text x="34.9" y="-9.3" size="1.27" layer="51" rot="R90">card lock position</text>
+<wire x1="28.8" y1="10" x2="28" y2="10" width="0.127" layer="51"/>
+<wire x1="28" y1="10" x2="18" y2="0" width="0.127" layer="51" curve="90"/>
+<wire x1="28" y1="-10.5" x2="18" y2="-0.5" width="0.127" layer="51" curve="-90"/>
+<wire x1="18" y1="0" x2="18" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="28" y1="-10.5" x2="28.8" y2="-10.5" width="0.127" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="SDCARD-1">
@@ -2232,6 +2272,26 @@ We've spent an enormous amount of time creating and checking these footprints an
 </gates>
 <devices>
 <device name="4UCON" package="SDCARD_4UCONN">
+<connects>
+<connect gate="G$1" pin="CD" pad="CD"/>
+<connect gate="G$1" pin="CD/DAT3" pad="1"/>
+<connect gate="G$1" pin="CLK" pad="5"/>
+<connect gate="G$1" pin="CMD" pad="2"/>
+<connect gate="G$1" pin="DAT0" pad="7"/>
+<connect gate="G$1" pin="DAT1" pad="8"/>
+<connect gate="G$1" pin="DAT2" pad="9"/>
+<connect gate="G$1" pin="SH@1" pad="SH@1"/>
+<connect gate="G$1" pin="SH@2" pad="SH@2"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+<connect gate="G$1" pin="VSS1" pad="3"/>
+<connect gate="G$1" pin="VSS2" pad="6"/>
+<connect gate="G$1" pin="WP" pad="WP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="" package="SD_1:1">
 <connects>
 <connect gate="G$1" pin="CD" pad="CD"/>
 <connect gate="G$1" pin="CD/DAT3" pad="1"/>
@@ -8934,7 +8994,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="LOGO" library="SparkFun" deviceset="LOGO-SFE" device="NEW"/>
 <part name="U$4" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".2_INCH" value="SFE_LOGO_FLAME.2_INCH"/>
-<part name="U1" library="SparkFun-Connectors" deviceset="SD_CARD_SOCKET" device="4UCON"/>
+<part name="U1" library="SparkFun-Connectors" deviceset="SD_CARD_SOCKET" device="" value="SD_CARD_SOCKET"/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="P+1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="P+2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
