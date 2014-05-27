@@ -135,26 +135,6 @@
 <libraries>
 <library name="SparkFun">
 <packages>
-<package name="SD-MMC-CARD">
-<wire x1="-11.43" y1="-13.97" x2="12.57" y2="-13.97" width="0.127" layer="21"/>
-<wire x1="-11.43" y1="14.03" x2="-11.43" y2="-13.97" width="0.127" layer="21"/>
-<wire x1="-11.43" y1="-13.97" x2="-11.43" y2="13.97" width="0.127" layer="51"/>
-<wire x1="-11.43" y1="13.97" x2="-7.62" y2="17.78" width="0.127" layer="51"/>
-<wire x1="-7.62" y1="17.78" x2="12.7" y2="17.78" width="0.127" layer="51"/>
-<wire x1="12.7" y1="17.78" x2="12.7" y2="-13.97" width="0.127" layer="51"/>
-<wire x1="12.7" y1="-13.97" x2="-11.43" y2="-13.97" width="0.127" layer="51"/>
-<smd name="5" x="3.465" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
-<smd name="4" x="0.93" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
-<smd name="8" x="10.43" y="14.703" dx="1.25" dy="6" layer="1" rot="R180"/>
-<smd name="7" x="8.43" y="14.703" dx="1.65" dy="6" layer="1" rot="R180"/>
-<smd name="6" x="6.03" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
-<smd name="1" x="-6.7446" y="14.7134" dx="1.75" dy="6" layer="1" rot="R180"/>
-<smd name="9" x="-9.53" y="12.03" dx="2" dy="5" layer="1" rot="R180"/>
-<smd name="2" x="-4.195" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
-<smd name="3" x="-1.6" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
-<text x="-5.08" y="19.05" size="0.4064" layer="25" rot="R180">&gt;NAME</text>
-<text x="6.35" y="19.05" size="0.4064" layer="27" rot="R180">&gt;VALUE</text>
-</package>
 <package name="SFE-LOGO">
 <wire x1="-0.3" y1="1.8" x2="0" y2="4" width="0.127" layer="21" curve="-125.453674"/>
 <wire x1="-0.3" y1="1.8" x2="-0.24" y2="0.05" width="0.127" layer="21" curve="-112.233894"/>
@@ -1430,23 +1410,6 @@
 </package>
 </packages>
 <symbols>
-<symbol name="SD-MMC-CARD">
-<wire x1="-5.08" y1="-12.7" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
-<wire x1="7.62" y1="12.7" x2="-5.08" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="12.7" x2="-5.08" y2="-12.7" width="0.254" layer="94"/>
-<text x="0.762" y="14.478" size="1.27" layer="95" rot="R180">&gt;NAME</text>
-<text x="3.048" y="-13.462" size="1.27" layer="96" rot="R180">&gt;VALUE</text>
-<pin name="DAT2" x="-10.16" y="10.16" length="middle"/>
-<pin name="CD/DAT3" x="-10.16" y="7.62" length="middle"/>
-<pin name="CMD" x="-10.16" y="5.08" length="middle"/>
-<pin name="VSS1" x="-10.16" y="2.54" length="middle"/>
-<pin name="VDD" x="-10.16" y="0" length="middle"/>
-<pin name="DAT1" x="-10.16" y="-10.16" length="middle"/>
-<pin name="DAT0" x="-10.16" y="-7.62" length="middle"/>
-<pin name="VSS2" x="-10.16" y="-5.08" length="middle"/>
-<pin name="CLK" x="-10.16" y="-2.54" length="middle"/>
-</symbol>
 <symbol name="LOGO1">
 <wire x1="-2.54" y1="5.08" x2="-2.54" y2="-2.54" width="0.254" layer="94"/>
 <wire x1="-2.54" y1="-2.54" x2="7.62" y2="-2.54" width="0.254" layer="94"/>
@@ -1461,29 +1424,6 @@
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="SD_MMC_CARD">
-<gates>
-<gate name="G$1" symbol="SD-MMC-CARD" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SD_PCB" package="SD-MMC-CARD">
-<connects>
-<connect gate="G$1" pin="CD/DAT3" pad="1"/>
-<connect gate="G$1" pin="CLK" pad="5"/>
-<connect gate="G$1" pin="CMD" pad="2"/>
-<connect gate="G$1" pin="DAT0" pad="7"/>
-<connect gate="G$1" pin="DAT1" pad="8"/>
-<connect gate="G$1" pin="DAT2" pad="9"/>
-<connect gate="G$1" pin="VDD" pad="4"/>
-<connect gate="G$1" pin="VSS1" pad="3"/>
-<connect gate="G$1" pin="VSS2" pad="6"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="LOGO-SFE" prefix="JP">
 <description>&lt;b&gt;Spark Fun Electronics PCB Logo&lt;/b&gt;
 This is the standard Spark Fun Electronics PCB logo.</description>
@@ -8980,6 +8920,82 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Boards">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find boards and modules: Arduino footprints, breadboards, non-RF modules, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="SD-MMC-CARD">
+<wire x1="-11.43" y1="-13.97" x2="12.57" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="-11.43" y1="14.03" x2="-11.43" y2="-13.97" width="0.127" layer="21"/>
+<wire x1="-11.43" y1="-13.97" x2="-11.43" y2="13.97" width="0.127" layer="51"/>
+<wire x1="-11.43" y1="13.97" x2="-7.62" y2="17.78" width="0.127" layer="51"/>
+<wire x1="-7.62" y1="17.78" x2="12.7" y2="17.78" width="0.127" layer="51"/>
+<wire x1="12.7" y1="17.78" x2="12.7" y2="-13.97" width="0.127" layer="51"/>
+<wire x1="12.7" y1="-13.97" x2="-11.43" y2="-13.97" width="0.127" layer="51"/>
+<smd name="5" x="3.465" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
+<smd name="4" x="0.93" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
+<smd name="8" x="10.43" y="14.703" dx="1.25" dy="6" layer="1" rot="R180"/>
+<smd name="7" x="8.43" y="14.703" dx="1.65" dy="6" layer="1" rot="R180"/>
+<smd name="6" x="6.03" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
+<smd name="1" x="-6.7446" y="14.7134" dx="1.75" dy="6" layer="1" rot="R180"/>
+<smd name="9" x="-9.53" y="12.03" dx="2" dy="5" layer="1" rot="R180"/>
+<smd name="2" x="-4.195" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
+<smd name="3" x="-1.6" y="14.703" dx="1.75" dy="6" layer="1" rot="R180"/>
+<text x="-5.08" y="19.05" size="0.4064" layer="25" rot="R180">&gt;NAME</text>
+<text x="6.35" y="19.05" size="0.4064" layer="27" rot="R180">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="SD-MMC-CARD">
+<wire x1="-5.08" y1="-12.7" x2="7.62" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-12.7" x2="7.62" y2="12.7" width="0.254" layer="94"/>
+<wire x1="7.62" y1="12.7" x2="-5.08" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="12.7" x2="-5.08" y2="-12.7" width="0.254" layer="94"/>
+<text x="0.762" y="14.478" size="1.27" layer="95" rot="R180">&gt;NAME</text>
+<text x="3.048" y="-13.462" size="1.27" layer="96" rot="R180">&gt;VALUE</text>
+<pin name="DAT2" x="-10.16" y="10.16" length="middle"/>
+<pin name="CD/DAT3" x="-10.16" y="7.62" length="middle"/>
+<pin name="CMD" x="-10.16" y="5.08" length="middle"/>
+<pin name="VSS1" x="-10.16" y="2.54" length="middle"/>
+<pin name="VDD" x="-10.16" y="0" length="middle"/>
+<pin name="DAT1" x="-10.16" y="-10.16" length="middle"/>
+<pin name="DAT0" x="-10.16" y="-7.62" length="middle"/>
+<pin name="VSS2" x="-10.16" y="-5.08" length="middle"/>
+<pin name="CLK" x="-10.16" y="-2.54" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="SD_MMC_CARD">
+<description>Mechanical size of an SD/MMC card- NOT a socket!</description>
+<gates>
+<gate name="G$1" symbol="SD-MMC-CARD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="SD_PCB" package="SD-MMC-CARD">
+<connects>
+<connect gate="G$1" pin="CD/DAT3" pad="1"/>
+<connect gate="G$1" pin="CLK" pad="5"/>
+<connect gate="G$1" pin="CMD" pad="2"/>
+<connect gate="G$1" pin="DAT0" pad="7"/>
+<connect gate="G$1" pin="DAT1" pad="8"/>
+<connect gate="G$1" pin="DAT2" pad="9"/>
+<connect gate="G$1" pin="VDD" pad="4"/>
+<connect gate="G$1" pin="VSS1" pad="3"/>
+<connect gate="G$1" pin="VSS2" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -8990,7 +9006,7 @@ Standard SMD solder jumper. Used to automate production. Two varients : Normally
 </class>
 </classes>
 <parts>
-<part name="U2" library="SparkFun" deviceset="SD_MMC_CARD" device="SD_PCB"/>
+<part name="U2" library="SparkFun-Boards" deviceset="SD_MMC_CARD" device="SD_PCB"/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
 <part name="LOGO" library="SparkFun" deviceset="LOGO-SFE" device="NEW"/>
 <part name="U$4" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_FLAME" device=".2_INCH" value="SFE_LOGO_FLAME.2_INCH"/>
